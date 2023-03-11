@@ -9,7 +9,7 @@ from airflow.operators.empty import EmptyOperator
 
 
 args = {
-    'owner': $$OWNER,
+    'owner': '$$OWNER',
     'start_date': $$START_DATE,
     'catchup': True,
     'retries': 3,

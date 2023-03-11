@@ -12,12 +12,12 @@ def replace_template_variables(template_dag: str = None, dict_variables: dict = 
       {
         "OWNER": "airflow",
         "DAG_ID": "test",
-        "PK_DK": "id"
+        "PK": "id"
         ...
       }
     }
     ```
-    На вход поступает значения по ключу `test` и функция итерируется по ключам: `OWNER`, `DAG_ID`, `PK_DK`, ...
+    На вход поступает значения по ключу `test` и функция итерируется по ключам: `OWNER`, `DAG_ID`, `PK`, ...
     Берет значения по ключу и заменяет шаблон в указанном `template_dag`.
 
     Соответственно, по всем ключам, которые есть в словаре DAG будет произведена замена по шаблону.
@@ -36,11 +36,11 @@ def dag_factory(type_dag: str = None) -> None:
     """
     Функция, которая генерирует DAG на основании выбранного `type_dag` и выбранных config на основании `type_dag`.
 
-    Пример: Если указан `overwriting` в `type_dag`, то функция для генерации DAG будет использовать config:
-    "config_overwriting_dag.json" и сохранит сгенерированные DAG в папку:
-    //dags/json_dags/overwriting/<overwriting_dag_name.py>
+    Пример: Если указан `print_something` в `type_dag`, то функция для генерации DAG будет использовать config:
+    "config_json_print_something.json" и сохранит сгенерированные DAG в папку:
+    //dags/json_dags/print_something/<print_something_dag_name.py>
 
-    @param type_dag: Указывается тип DAG для генерации overwriting|upsert; default 'None'.
+    @param type_dag: Указывается тип DAG для генерации print_something|etc; default 'None'.
     @return: Ничего не возвращает, а сохраняет сгенерированный DAG по определенному пути.
     """
     with open(f'dag_config_json_{type_dag}/config_{type_dag}_dag.json') as j:
@@ -52,10 +52,8 @@ def dag_factory(type_dag: str = None) -> None:
 
     for dag in json_config:
         modified_template = replace_template_variables(template_dag=template, dict_variables=json_config[dag])
-        with open(f'../dags/dev/ritm_dags/GP/{type_dag}/{dag}.py', mode='w') as dag_pyfile:
+        with open(f'../dags/json_dags/{type_dag}/{dag}.py', mode='w') as dag_pyfile:
             dag_pyfile.write(modified_template)
 
 
-# dag_factory(type_dag='overwriting')
-dag_factory(type_dag='upsert')
-# dag_factory(type_dag='not_including_append')
+dag_factory(type_dag='print_something')
