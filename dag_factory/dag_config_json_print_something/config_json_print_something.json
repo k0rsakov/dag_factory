@@ -1,0 +1,41 @@
+{
+  "dim_content_categoryvideo_to_gp": {
+    "OWNER": "i.korsakov",
+    "DAG_ID": "dim_content_categoryvideo_to_gp",
+    "GP_TARGET_SCHEMA": "antares",
+    "GP_TARGET_TABLE": "ods_content_categoryvideo",
+    "GP_TMP_TABLE": "tmp_ods_content_categoryvideo",
+    "GP_ET_TABLE": "antares_public_content_categoryvideo",
+    "GP_ENVIRONMENT": "GP_CONNECT_PROD",
+    "PK_DK": "id",
+    "LONG_DESCRIPTION": "# LONG DESCRIPTION",
+    "SHORT_DESCRIPTION": "SHORT DESCRIPTION",
+    "LIST_COLUMNS": "['id', 'category_id', 'video_id']",
+    "ENVIRONMENT": "dev",
+    "START_DATE": "datetime(2023, 3, 1, tzinfo=LOCAL_TZ)",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['not_including', 'append', 'gp', 'pg', 'from_pg_antares', 'to_gp_dwh']",
+    "DDL_LIST_COLUMNS_WITH_DATA_TYPES": "id int4, \n            category_id int4, \n            video_id int4",
+    "POOL": "antares_pool"
+  },
+  "dim_content_videoviews_to_gp": {
+    "OWNER": "i.korsakov",
+    "DAG_ID": "dim_content_videoviews_to_gp",
+    "GP_TARGET_SCHEMA": "antares",
+    "GP_TARGET_TABLE": "ods_content_videoviews",
+    "GP_TMP_TABLE": "tmp_ods_content_videoviews",
+    "GP_ET_TABLE": "antares_public_content_videoviews",
+    "GP_ENVIRONMENT": "GP_CONNECT_PROD",
+    "PK_DK": "video_id",
+    "DTYPE_PK_DK": "video_id::uuid",
+    "LONG_DESCRIPTION": "# LONG DESCRIPTION",
+    "SHORT_DESCRIPTION": "SHORT DESCRIPTION",
+    "LIST_COLUMNS": "['video_id::uuid', 'started', 'ended', 'started_inheritance', 'started_motivation']",
+    "ENVIRONMENT": "dev",
+    "START_DATE": "datetime(2023, 3, 1, tzinfo=LOCAL_TZ)",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['not_including', 'append', 'gp', 'pg', 'from_pg_antares', 'to_gp_dwh']",
+    "DDL_LIST_COLUMNS_WITH_DATA_TYPES": "video_id uuid, \n            started int8, \n            ended int8, \n            started_inheritance int8, \n            started_motivation int8",
+    "POOL": "antares_pool"
+  }
+}
