@@ -1,10 +1,82 @@
 {
-  "template": {
+  "template_1": {
     "OWNER": "k0rsakov",
     "START_DATE": "datetime(2023, 3, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
-    "PRINT": "something",
-    "DAG_ID": "template",
+    "PRINT": "something_1",
+    "DAG_ID": "template_1",
     "SCHEDULE_INTERVAL": "10 0 * * *",
-    "TAGS": "['not_including', 'append', 'gp', 'pg', 'from_pg_antares', 'to_gp_dwh']"
+    "TAGS": "['template', 'test']"
+  },
+  "template_2": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2023, 3, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_2",
+    "DAG_ID": "template_2",
+    "SCHEDULE_INTERVAL": "0 10 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_3": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2010, 2, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_3",
+    "DAG_ID": "template_3",
+    "SCHEDULE_INTERVAL": "12 12 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_4": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2022, 8, 1, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_4",
+    "DAG_ID": "template_4",
+    "SCHEDULE_INTERVAL": "0 10 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_5": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2019, 6, 15, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_5",
+    "DAG_ID": "template_5",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_6": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2023, 4, 5, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_6",
+    "DAG_ID": "template_6",
+    "SCHEDULE_INTERVAL": "10 2 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_7": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2020, 1, 1, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_7",
+    "DAG_ID": "template_7",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_8": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2023, 3, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_8",
+    "DAG_ID": "template_8",
+    "SCHEDULE_INTERVAL": "10 10 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_9": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2023, 4, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_9",
+    "DAG_ID": "template_9",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['template', 'test']"
+  },
+  "template_10": {
+    "OWNER": "k0rsakov",
+    "START_DATE": "datetime(2022, 3, 10, tzinfo=pendulum.timezone('Europe/Moscow'))",
+    "PRINT": "something_10",
+    "DAG_ID": "template_10",
+    "SCHEDULE_INTERVAL": "10 0 * * *",
+    "TAGS": "['template', 'test']"
   }
 }
