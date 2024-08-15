@@ -1,4 +1,6 @@
-# dag_factory
+# Генерация DAG в Apache Airflow
+
+Статья на [habr](https://habr.com/ru/articles/722688/)
 
 Для получения docker-compose для Airflow, необходимо выполнить команду:
 
@@ -28,3 +30,9 @@ python3 -m venv venv
 ```bash
 pip install -r requirements.txt
 ```
+
+___
+
+Если вам необходима консультация/менторство/мок-собеседование и другие вопросы по дата-инженерии, то вы можете
+обращаться ко мне. Все контакты указаны по
+[ссылке](https://www.notion.so/korsak0v/Data-Engineer-185c62fdf79345eb9da9928356884ea0).
